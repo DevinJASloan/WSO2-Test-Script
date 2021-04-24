@@ -5,16 +5,14 @@ count = input("How many threads would you like to use?")
 
 url = 'https://172.16.20.200:9443/api/identity/auth/v1.1/authenticate'
 
-data = {
+header = {
     'Authorization': 'Basic <Base64Encoded[admin:admin]>',
-    'Content-Type': 'application/json',
-    'username': 'admin',
-    'password': 'admin'
+    'Content-Type': 'application/json'
 }
 
 
 def do_request():
-    response = requests.post(url, data=data)
+    response = requests.post(url, header=header)
     print(response)
 
 
