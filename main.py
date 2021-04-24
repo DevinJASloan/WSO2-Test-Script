@@ -3,7 +3,7 @@ import requests
 
 count = input("How many threads would you like to use?")
 
-url = 'https://localhost:9443/api/identity/auth/v1.1/authenticate'
+url = 'https://172.16.20.200:9443/api/identity/auth/v1.1/authenticate'
 
 data = {
     'Authorization': 'Basic <Base64Encoded[admin:admin]>',
