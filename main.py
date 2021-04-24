@@ -20,13 +20,13 @@ def do_request():
 
 threads = []
 
-for i in range(count):
+for i in range(int(count)):
     t = threading.Thread(target=do_request)
     t.daemon = True
     threads.append(t)
 
-for i in range(count):
+for i in range(int(count)):
     threads[i].start()
 
-for i in range(count):
+for i in range(int(count)):
     threads[i].join()
