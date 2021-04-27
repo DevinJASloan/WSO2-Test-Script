@@ -1,7 +1,7 @@
 import threading
 import requests
 
-count = input("How many threads would you like to use?")
+count = input("How many threads would you like to use? ")
 
 url = 'https://172.16.20.100:9443/samlsso?spEntityID=travelocity.com'
 
