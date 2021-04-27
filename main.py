@@ -16,7 +16,11 @@ user = {'Authorization': 'Basic <Base64Encoded[admin:admin]>'}
 
 def do_request():
     response = requests.post(url, headers=header_data, data=user, verify=False)
-    print(response)
+    print(response.text)
+    if re.match('.*200.*', String(response)
+        queue.put(1)
+    else
+        queue.put(0)
 
 
 threads = []
@@ -28,6 +32,11 @@ for i in range(int(count)):
 
 for i in range(int(count)):
     threads[i].start()
+    result=queue.get()
+    success.append(result)
 
 for i in range(int(count)):
     threads[i].join()
+
+print(sum(success))
+      
